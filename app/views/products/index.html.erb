@@ -7,8 +7,22 @@
 
 <div id="products">
   <% @products.each do |product| %>
-    <div>
-      <%= link_to product.name, product %>
+    <div class="product">
+      <div class="product-image">
+        <% if product.featured_image.attached? %>
+          <%= image_tag product.featured_image, alt: product.name, class: 'product-image' %>
+        <% else %>
+          <%= image_tag 'default-image.jpg', alt: 'Default image', class: 'product-image' %>
+        <% end %>
+      </div>
+      
+      <div class="product-name">
+        <%= link_to product.name, product %>
+      </div>
     </div>
   <% end %>
 </div>
+
+
+
+<link rel="stylesheet" href="/assets/stylesheets/index.css">

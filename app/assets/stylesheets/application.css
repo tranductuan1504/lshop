@@ -1,10 +1,78 @@
-/*
- * This is a manifest file that'll be compiled into application.css.
- *
- * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
- * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
- * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
- * depending on specificity.
- *
- * Consider organizing styles into separate files for maintainability.
- */
+/* Reset một số thuộc tính cơ bản để tránh sự khác biệt giữa các trình duyệt */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Cài đặt font chữ chung cho toàn bộ trang */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  /* Styling cho header */
+  header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+  }
+  
+  /* Cải thiện giao diện cho menu điều hướng */
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  /* Styling cho các liên kết trong menu */
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Hover effect cho các liên kết */
+  nav a:hover {
+    background-color: #575757;
+    color: #fff;
+    border-radius: 5px;
+  }
+  
+  /* Styling cho button logout */
+  nav form button {
+    color: white;
+    background-color: #e74c3c;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hover effect cho button logout */
+  nav form button:hover {
+    background-color: #c0392b;
+    border-radius: 5px;
+  }
+  
+  /* Styling cho phần nội dung chính */
+  main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Thêm một số khoảng cách dưới mỗi phần tử */
+  main > * {
+    margin-bottom: 20px;
+  }
+  

@@ -1,0 +1,61 @@
+/* Định dạng khối chứa sản phẩm */
+#products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.product {
+  width: 220px; /* Kích thước cố định cho sản phẩm */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  padding: 15px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px); /* Hiệu ứng nổi lên khi hover */
+}
+
+/* Định dạng khối ảnh sản phẩm */
+.product-image {
+  margin-bottom: 15px;
+  width: 100%; /* Chiếm toàn bộ chiều rộng khung sản phẩm */
+  height: 220px; /* Chiều cao cố định */
+  overflow: hidden;
+  border-radius: 10px; /* Bo góc khung chứa ảnh */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eaeaea; /* Màu nền mặc định khi không có ảnh */
+}
+
+.product-image img {
+  width: 100%; /* Ảnh chiếm hết chiều rộng khung */
+  height: 100%; /* Ảnh chiếm hết chiều cao khung */
+  object-fit: cover; /* Ảnh bao phủ mà không méo */
+}
+
+/* Định dạng ảnh mặc định */
+.product-image img[alt="Default image"] {
+  object-fit: contain; /* Hiển thị nguyên vẹn ảnh mặc định */
+  opacity: 0.8; /* Giảm độ nổi bật của ảnh mặc định */
+}
+
+/* Định dạng tên sản phẩm */
+.product-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-top: 10px;
+}

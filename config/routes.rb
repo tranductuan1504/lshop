@@ -4,9 +4,11 @@ Rails.application.routes.draw do
   resources :passwords, param: :token
   resources :products do
     resources :subscribers, only: [ :create ]
+    resource :unsubscribe, only: [ :show ]
   end
 
   root "products#index"
+  resource :unsubscribe, only: [ :show ]
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

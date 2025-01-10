@@ -41,9 +41,9 @@ class ProductsController < ApplicationController
   def set_product
     @product = Product.find_by(id: params[:id])
     # Nếu sản phẩm không tồn tại, có thể redirect hoặc hiển thị lỗi
-    redirect_to products_path, notice: 'Product not found.' unless @product
+    redirect_to products_path, notice: "Product not found." unless @product
   end
-  
+
 
     def product_params
       params.expect(product: [ :name, :description, :featured_image, :inventory_count ])

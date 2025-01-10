@@ -2,7 +2,10 @@ Rails.application.routes.draw do
   resource :session, only: [:new, :create, :destroy]
   resource :registration, only: [:new, :create]
   resources :passwords, param: :token
-  resources :products
+  resources :products do
+    resources :subscribers, only: [ :create ]
+  end
+
   root "products#index"
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

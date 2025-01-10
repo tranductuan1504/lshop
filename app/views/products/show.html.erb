@@ -4,6 +4,8 @@
 <h1><%= @product.name %></h1>
 <%= @product.description %>
 <% end %>
+<%= render "inventory", product: @product %>
+
 
 <%= link_to "Back", products_path %>
 <% if authenticated? %>
